@@ -32,14 +32,14 @@ I train on email in the following way:
 
 For email with dspam tag (X-DSPAM-Result: Spam) issue the following command:
 
-echo $email | dspamc --user user@domain --mode=teft --class=spam --source=error
+cat $email | dspamc --user user@domain --mode=teft --class=spam --source=error
 
 For email with no dspam header tag (For spam prior to implementing dspam): 
 
-echo $email | dspamc --user user@domain --mode=temp --class=spam --source=corpus
+cat $email | dspamc --user user@domain --mode=temp --class=spam --source=corpus
 
 For ham marked as spam:
 
-echo $email | dspamc --user user@domain --mode=teft --class=innocent --source=error
+cat $email | dspamc --user user@domain --mode=teft --class=innocent --source=error
 
 To be continued...
