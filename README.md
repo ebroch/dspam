@@ -29,10 +29,15 @@ header for the chosen domains. The DSPAM tags in the email header take the
 following form:
 
 1) 'X-DSPAM-Result: Whitelisted' ;
+
 2) 'X-DSPAM-Processed: Wed Jan 29 15:54:00 2014' ;
+
 3) 'X-DSPAM-Confidence: 0.9979' ;
+
 4) 'X-DSPAM-Improbability: 1 in 47847 chance of being spam' ;
+
 5) 'X-DSPAM-Probability: 0.0000' ;
+
 6) 'X-DSPAM-Signature: 1,52e9868836001165617631'
 
 For training I create a '.spam' and '.notspam' directory for every IMAP user and 
@@ -48,15 +53,21 @@ I train on email by bash scripts in the following ways:
    The DSPAM result will be 'X-DSPAM-Result: Spam'
 
 2) For spam marked by DSPAM as ham, I train with:
+   
    cat $email | dspamc --user user@domain --mode=teft --class=spam --source=error
+   
    The DSPAM result will be 'X-DSPAM-Result: Innocent'
    
 3) For spam having no DSPAM tags in the email header I train with:
+   
    cat $email | dspamc --user user@domain --mode=temp --class=spam --source=corpus
+   
    This will occur if email has never been processed by DSPAM in .qmail-default
    
 4) For ham marked by DSPAM as spam, I train with:
+   
    cat $email | dspamc --user user@domain --mode=teft --class=innocent --source=error
+   
    The DSPAM result will be 'X-DSPAM-Result: Spam'
    
 To be continued...
