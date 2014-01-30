@@ -28,12 +28,12 @@ After this procedure is complete a DSPAM tag should be present in every email
 header for the chosen domains. The DSPAM tags in the email header take the 
 following form:
 
-1) 'X-DSPAM-Result: Whitelisted' ;
-2) 'X-DSPAM-Processed: Wed Jan 29 15:54:00 2014' ;
-3) 'X-DSPAM-Confidence: 0.9979' ;
-4) 'X-DSPAM-Improbability: 1 in 47847 chance of being spam' ;
-5) 'X-DSPAM-Probability: 0.0000' ;
-6) 'X-DSPAM-Signature: 1,52e9868836001165617631'
+X-DSPAM-Result: Whitelisted
+X-DSPAM-Processed: Wed Jan 29 15:54:00 2014
+X-DSPAM-Confidence: 0.9979
+X-DSPAM-Improbability: 1 in 47847 chance of being spam
+X-DSPAM-Probability: 0.0000
+X-DSPAM-Signature: 1,52e9868836001165617631
 
 For training I create a '.spam' and '.notspam' directory for every IMAP user and 
 train DSPAM on the email in these folders. I've never had to train any ham. DSPAM
