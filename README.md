@@ -42,7 +42,7 @@ works well for me without doing so.
 The '.spam' folder is where users are to put spam marked as innocent.
 The '.notspam' folder is where users are to put ham marked as spam.
 
-I train on email by bash scripts in the following way 
+I train on email by bash scripts in the following ways:
 
 1) For spam marked by DSPAM as spam, I simply delete it and don't train twice.
    The DSPAM result will be 'X-DSPAM-Result: Spam'
