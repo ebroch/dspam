@@ -11,13 +11,20 @@ It will create a 'dspam' directory in the current direcotry.
 Run the script dspam/dspamdb.sh. It will do the following:
 
 1) Make sure that MySQL is installed and running; 
+
 2) Remove any existing DSPAM database;
+
 3) Create a new empty DSPAM database; 
+
 4) Install epel repository;
+
 5) Install dspam, dspam-client, and dspam-mysql from this repo;
+
 6) Change permission on '/var/run/dspam'; 
+
 7) Move old '/etc/dspam.conf' to '/etc/dspam.conf.bak' 
    and copy new dspam/dspam.conf to '/etc/dspam.conf';
+
 8) Give the option to copy the old '~/mydomain.com/.qmail-default' to 
    '~/mydomain.com/.qmail-default.bak' and copy new 'dspam/.qmail-default' to
    '~/mydomain.com/.qmail-default'
