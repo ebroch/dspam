@@ -4,7 +4,7 @@
 # Download and run dspam installer
 #
 
-wget ftp://ftp.whitehorsetc.com/pub/dspam/archive/dspam-install.el.tar.gz
+wget https://github.com/ebroch/dspam/raw/master/dspam-install.el.tar.gz
 if [ "$?" != "0" ]; then
    exit 1
 fi
